@@ -1,6 +1,6 @@
 ### 每次启动从 zookeeper 拉取“有限”的数据
 
-对于拥有成千上万个 dubbo 服务的环境来说（测试环境），每次启动 admin 都非常慢，因为它需要从 dubbo registry 拉取全量的服务相关数据，所以，为了加快 admin 启动速度，方便对其进行学习和 debug，我采用如下方法来过滤要拉取数据：
+对于拥有成千上万个 dubbo 服务的环境来说，每次启动 admin 都非常慢，因为它需要从 dubbo registry 拉取全量的服务相关数据，所以，为了加快 admin 启动速度，**方便对其进行学习和 debug**，我采用如下方法来过滤要拉取数据：
 
 #### 思路
  - 修改 com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry.java 源代码，在代码中设定过滤条件
